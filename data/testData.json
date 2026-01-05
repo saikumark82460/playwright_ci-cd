@@ -1,0 +1,11 @@
+{
+    "Actions":{
+        "clickButton":"Click Me",
+        "dbClickButton":"Double Click Me",
+        "rightClickButton":"Right Click Me"
+    },
+    "uploadFile":{
+        "filePath":"uploads/sampleFile.txt"
+    }
+
+}
