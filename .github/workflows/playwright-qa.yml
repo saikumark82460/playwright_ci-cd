@@ -38,11 +38,11 @@ jobs:
          run: |
             if ["${{inputs.test_type}}" == "sanity"]; then
               echo "Running sanity regression"
-              npx playwright test --grep "sanity"
+              npx playwright test --grep "@sanity"
 
             else 
               echo "Running full regression"
-              npx playwight test --grep "regression"
+              npx playwight test --grep "@regression"
             fi
           
        - name: Upload playwright reports
