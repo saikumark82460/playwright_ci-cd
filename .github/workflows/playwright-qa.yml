@@ -42,7 +42,7 @@ jobs:
 
             else 
               echo "Running full regression"
-              npx playwight test --grep "@regression"
+              npx playwright test --grep "@regression"
             fi
           
        - name: Upload playwright reports
