@@ -7,7 +7,7 @@ const data = require("../data/testData.json");
 const path = require('path');
 
 test.describe('Action Buttons test suite', () => {
-   test('perform actions on Buttons', async ({page}) => {
+   test('perform actions on Buttons', {tag: "@regression"}, async ({page}) => {
      const button = new ButtonPage(page);
      await page.goto('/buttons');
      await button.performButtonAction(data.Actions);
@@ -15,7 +15,7 @@ test.describe('Action Buttons test suite', () => {
      await expect(button.rightClickMessage).toHaveText('You have done a right click');
      await expect(button.clickMessage).toHaveText('You have done a dynamic click');
    });
-   test('perform action on upload file and download image file', async ({page}) => {
+   test('perform action on upload file and download image file',{tag:["@regression","@snaity"]}, async ({page}) => {
       const uploads = new UploadFilePage(page);
       await page.goto('/upload-download');
       await uploads.uploadFile(path.resolve(__dirname,'../uploads/sampleFile.txt'));
@@ -25,7 +25,7 @@ test.describe('Action Buttons test suite', () => {
       ])
       await download.saveAs(path.resolve(__dirname,'../downloads/mountainImage.jpeg'));
    });
-   test('handle browser windows', async ({page}) => {
+   test('handle browser windows',{tag:["@regression","@sanity"]}, async ({page}) => {
       const browserWindows = new BrowserWindowsPage(page);
       await page.goto('/browser-windows');
       const count = await browserWindows.browserWindowButtons().count();
@@ -41,7 +41,7 @@ test.describe('Action Buttons test suite', () => {
          }
       }
    })
-   test.only('handle Alerts',async ({page}) => {
+   test.skip('handle Alerts', {tag:["@regression","@sanity"]}, async ({page}) => {
        const alert = new AlertPage(page);
        await page.goto('/alerts');
     //    const alertCount = await alert.alertButton.count();
