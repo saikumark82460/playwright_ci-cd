@@ -1,1 +1,0 @@
-Dialog message for button index 0: You clicked a button

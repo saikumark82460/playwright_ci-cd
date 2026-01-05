@@ -1,4 +1,0 @@
-Alert button count: 4
-Dialog message for button index 0: Do you confirm action?
-Dialog message for button index 1: Do you confirm action?
-Dialog message for button index 2: Please enter your name

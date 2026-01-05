@@ -32,7 +32,7 @@ jobs:
          run: npm ci
          
        - name: Install playwright browsers
-         run: npx install playwright --with-deps
+         run: npx playwright install --with-deps
          
        - name: Run QA playwright tests
          run: |
